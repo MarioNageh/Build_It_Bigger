@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivityFragment">
+
+    <ImageView
+        android:id="@+id/image_id"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fun"/>
+
+    <TextView
+        android:layout_margin="@dimen/material_bottom_nav_bar_action_label_padding_bottom"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/material_typography_tall_display_1_text_size"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/image_id"
+        android:id="@+id/instructions_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/instructions" />
+
+    <Button
+        android:padding="@dimen/material_bottom_nav_bar_action_label_padding_bottom"
+        android:background="@color/material_color_brown_50"
+        android:textSize="@dimen/material_typography_tall_headline_text_size"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/instructions_text_view"
+        android:onClick="tellJoke"
+        android:text="@string/button_text" />
+		
+ <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id">
+    </com.google.android.gms.ads.AdView>
+
+
+</RelativeLayout>
